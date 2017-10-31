@@ -1,0 +1,20 @@
+---
+title: "Demonstration of Leaflet Capabilities"
+author: "Nica Stefan"
+date: "31 octombrie 2017"
+output: html_document
+---
+
+```{r setup, echo = TRUE}
+library(leaflet)
+mymap <- leaflet() %>%
+  addTiles()%>%
+  addMarkers(lat = 47.150914 , lng = 27.594014, popup = "Home") %>%
+  addRectangles(lat1 = 47.140914, lng1 = 27.584014,
+                lat2 = 47.160914, lng2 = 27.604014,
+                popup = "Childhood Neighbourhood")%>%
+  addMarkers(lat = 47.173027, lng = 27.569510, popup = "HighSchool")%>%
+  addMarkers(lat = 47.174004, lng = 27.572364, popup = "Faculty of Physics")%>%
+  addMarkers(lat = 47.159960, lng = 27.587541, popup = "Actual WorkPlace")
+mymap
+```
